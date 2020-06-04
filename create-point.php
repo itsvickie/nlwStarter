@@ -1,3 +1,5 @@
+<?php require_once("./database/conexao.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,15 +16,15 @@
 <body>
     <div id="page-create-point">
         <header>
-            <img src="/assets/logo.svg" alt="Logomarca">
+            <img src="./assets/logo.svg" alt="Logomarca">
 
             <!-- Hyperlink - Elemento Inline -->
-            <a href="/index.html">
+            <a href="./index.php">
                 <span></span>
                 Voltar para a página inicial</a>
         </header>
 
-        <form action="">
+        <form action="./database/create-point.php" method="post">
             <h1>Cadastro do Ponto de Coleta</h1>
 
             <fieldset>

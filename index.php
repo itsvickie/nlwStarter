@@ -1,3 +1,5 @@
+<?php require_once ("./database/conexao.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +9,18 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/style/main.css">
-    <link rel="stylesheet" href="/style/home.css">
-    <link rel="stylesheet" href="/style/resposive.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/home.css">
+    <link rel="stylesheet" href="./style/resposive.css">
 </head>
 <body>
     <div id="page-home">
         <div class="content">
             <header>
-                <img src="/assets/logo.svg" alt="Logomarca">
+                <img src="./assets/logo.svg" alt="Logomarca">
 
                 <!-- Hyperlink - Elemento Inline -->
-                <a href="/create-point.html">
+                <a href="./create-point.php">
                     <span></span>
                     Cadastre um ponto de coleta</a>
             </header>
