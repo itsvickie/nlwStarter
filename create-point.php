@@ -113,6 +113,6 @@
         </form>
     </div>
 
-    <script src="./script/create-point.js"></script>
+    <script src="./scripts/create-point.js"></script>
 </body>
 </html>
