@@ -43,7 +43,7 @@
                 <a href="#">Fechar</a>
             </div>
 
-            <form action="">
+            <form action="./search-results.php">
                 <label for="search">Cidade</label>
                 <div class="search field">
                     <input type="text" name=search placeholder="Pesquise por Cidade">
