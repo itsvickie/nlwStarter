@@ -82,3 +82,4 @@ function handleSelectedItem(){
     //setar o value dos itens coletados no input hidden para os itens selecionados conforme logica
     collectedItems.value = selectedItems;
 }
+
