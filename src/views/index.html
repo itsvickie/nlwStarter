@@ -1,5 +1,3 @@
-<?php require_once ("./database/conexao.php"); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +14,9 @@
 </head>
 <body>
     <div id="page-home">
+        {% include "partials/page-header.html" %}
+
         <div class="content">
-            <header>
-                <img src="./assets/logo.svg" alt="Logomarca">
-
-                <!-- Hyperlink - Elemento Inline -->
-                <a href="./create-point.php">
-                    <span></span>
-                    Cadastre um ponto de coleta</a>
-            </header>
-
             <main>
                 <h1>Seu marketplace de coleta de resíduos</h1>
             
@@ -43,7 +34,7 @@
                 <a href="#">Fechar</a>
             </div>
 
-            <form action="./search-results.php">
+            <form action="/search-results">
                 <label for="search">Cidade</label>
                 <div class="search field">
                     <input type="text" name=search placeholder="Pesquise por Cidade">
