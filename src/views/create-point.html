@@ -13,14 +13,7 @@
 </head>
 <body>
     <div id="page-create-point">
-        <header>
-            <img src="./assets/logo.svg" alt="Logomarca">
-
-            <!-- Hyperlink - Elemento Inline -->
-            <a href="/">
-                <span></span>
-                Voltar para a página inicial</a>
-        </header>
+        {% include "partials/page-header.html" %}
 
         <form action="./database/create-point.php" method="post">
             <h1>Cadastro do Ponto de Coleta</h1>
