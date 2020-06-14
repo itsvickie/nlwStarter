@@ -16,22 +16,8 @@ db.serialize(() => {
             address TEXT NOT NULL,
             address2 TEXT NOT NULL,
             state TEXT NOT NULL,
-            city TEXT NOT NULL
-        );
-    `);
-
-    db.run(`
-        CREATE TABLE if not exists items (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            category TEXT NOT NULL
-        );
-    `);
-
-    db.run(`
-        CREATE TABLE if not exists places_items (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            id_items INTEGER NOT NULL,
-            id_exists INTEGER NOT NULL
+            city TEXT NOT NULL,
+            items TEXT NOT NULL
         );
     `);
 
@@ -43,8 +29,9 @@ db.serialize(() => {
             address,
             address2,
             state,
-            city
-        ) VALUES ( ?,?,?,?,?,? );
+            city,
+            items
+        ) VALUES ( ?,?,?,?,?,?,? );
         `;
 
     const values = [
@@ -53,22 +40,36 @@ db.serialize(() => {
         "Guilherme Gemballa, Jardim América",
         "Número 260",
         "Santa Catarina",
-        "Rio do Sul"
+        "Rio do Sul",
+        "Resíduos Eletrônicos, Lâmpadas"
     ];
 
     function afterInsertData(err) {
-        if(err){
+        try {
+            console.log("Cadastrado com Sucesso!");
+            console.log(this);
+        } catch (err) {
             return console.log(err);
-        }
-
-        console.log("Cadastrado com Sucesso!");
-        console.log(this);
+        }     
     }
 
-    db.run(query, values, function(err){
-        
-    });
+    // db.run(query, values, afterInsertData);
     //Consultar
+    db.all(`SELECT * FROM places`, function(err, rows){
+        try {
+            console.log("Registros: ");
+            console.log(rows);
+        } catch (err) {
+            return console.log(err);
+        }
+    });
 
     //Deletar 
+    db.run(`DELETE FROM places WHERE id = ?`, [1], function(err){
+        try {
+            console.log("Deletado com Sucesso!");
+        } catch (err) {
+            return console.log(err);
+        }
+    });
 });
