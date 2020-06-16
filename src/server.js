@@ -7,6 +7,9 @@ const database = require("./database/db.js");
 //Config pasta pública
 server.use(express.static("public"));
 
+//Habilitar o uso do req.body
+server.use(express.urlencoded({ extended: true }));
+
 //Template Engine - Nunjucks
 const nunjucks = require("nunjucks");
 nunjucks.configure("src/views", {
@@ -31,10 +34,49 @@ server.get("/search-results", (req, res) => {
         try {
             const total = rows.length;
             res.render("search-results.html", { places: rows, total });
-        } catch (err) {
+        } catch (error) {
             return console.log(error);
         }
     });
+});
+
+server.post("/savepoint", (req, res) => {
+    // console.log(req.body);
+
+    // Inserir dados
+    const query = `
+        INSERT INTO places (
+            image,
+            name,
+            address,
+            address2,
+            state,
+            city,
+            items
+        ) VALUES ( ?,?,?,?,?,?,? );
+        `;
+
+    const values = [
+        req.body.image,
+        req.body.name,
+        req.body.address,
+        req.body.address2,
+        req.body.state,
+        req.body.city,
+        req.body.items
+    ];
+
+    function afterInsertData(error) {
+        try {
+            console.log("Cadastrado com Sucesso!");
+            console.log(this);
+            return res.render("create-point.html", { saved: true });
+        } catch (error) {
+            return console.log(error);
+        }
+    }
+
+    database.run(query, values, afterInsertData);
 });
 
 //Startar o Servidor
