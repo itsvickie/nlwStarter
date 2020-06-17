@@ -45,33 +45,33 @@ module.exports = db;
 //         "Resíduos Eletrônicos, Lâmpadas"
 //     ];
 
-    // function afterInsertData(err) {
-    //     try {
-    //         console.log("Cadastrado com Sucesso!");
-    //         console.log(this);
-    //     } catch (err) {
-    //         return console.log(err);
-    //     }     
-    // }
+//     // function afterInsertData(err) {
+//     //     try {
+//     //         console.log("Cadastrado com Sucesso!");
+//     //         console.log(this);
+//     //     } catch (err) {
+//     //         return console.log(err);
+//     //     }     
+//     // }
 
-    // db.run(query, values, afterInsertData);
+//     // db.run(query, values, afterInsertData);
 
-    // //Consultar
-    // db.all(`SELECT * FROM places`, function(err, rows){
-    //     try {
-    //         console.log("Registros: ");
-    //         console.log(rows);
-    //     } catch (err) {
-    //         return console.log(err);
-    //     }
-    // });
+//     // //Consultar
+//     // db.all(`SELECT * FROM places`, function(err, rows){
+//     //     try {
+//     //         console.log("Registros: ");
+//     //         console.log(rows);
+//     //     } catch (err) {
+//     //         return console.log(err);
+//     //     }
+//     // });
 
-//     //Deletar 
-//     db.run(`DELETE FROM places WHERE id = ?`, [7], function(err){
-//         try {
-//             console.log("Deletado com Sucesso!");
-//         } catch (err) {
-//             return console.log(err);
-//         }
-//     });
-// });
+// //     //Deletar 
+// //     db.run(`DELETE FROM places WHERE id = ?`, [6], function(err){
+// //         try {
+// //             console.log("Deletado com Sucesso!");
+// //         } catch (err) {
+// //             return console.log(err);
+// //         }
+// //     });
+// // });
