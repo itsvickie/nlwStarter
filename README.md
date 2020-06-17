@@ -1,4 +1,4 @@
-![] (EcoletaGif.gif)
+![EcoletaGif](https://user-images.githubusercontent.com/49333069/84850031-0f9a2a80-b02d-11ea-9ed1-5e9f7d0e324a.gif)
 
 ## O Projeto 📌
 
