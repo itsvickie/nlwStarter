@@ -1,3 +1,5 @@
+![] (EcoletaGif.gif)
+
 ## O Projeto 📌
 
 O Ecoleta é um projeto desenvolvido durante a Next Level Week (NLW #1) disponibilizado pela RocketSeat e ministrado pelo Mayk Brito, com o objetivo de cadastrar e encontrar pontos de coleta de reciclagem de alguns materiais. Pensado para homenagear a semana mundial do Meio Ambiente (1 a 5 de junho).
